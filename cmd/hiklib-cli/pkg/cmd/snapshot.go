@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"github.com/sarjsheff/hiklib"
+	"github.com/r41co/hiklib"
 	"github.com/spf13/cobra"
 )
 

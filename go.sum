@@ -3,9 +3,9 @@ github.com/dustin/go-humanize v1.0.1 h1:GzkhY7T5VNhEkwH0PVJgjz+fX1rhBrR7pRT3mDkp
 github.com/dustin/go-humanize v1.0.1/go.mod h1:Mu1zIs6XwVuF/gI1OepvI0qD18qycQx+mFykh5fBlto=
 github.com/inconshreveable/mousetrap v1.1.0 h1:wN+x4NVGpMsO7ErUn/mUI3vEoE6Jt13X2s0bqwp9tc8=
 github.com/inconshreveable/mousetrap v1.1.0/go.mod h1:vpF70FUmC8bwa3OWnCshd2FqLfsEA9PFc4w1p2J65bw=
+github.com/r41co/hiklib v0.0.11 h1:lQ/C3lJq+dxoXtaECnXUyMziC1oAyV36opcTwqV23CI=
+github.com/r41co/hiklib v0.0.11/go.mod h1:uevtMxndF/ROTapwtpqr9vohRSWTuLPs5Ye7XByL/j4=
 github.com/russross/blackfriday/v2 v2.1.0/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=
-github.com/sarjsheff/hiklib v0.0.10 h1:zsUj1HAdstl98B4NFO3wk8IuRFm6pT5JV13ghIidZt8=
-github.com/sarjsheff/hiklib v0.0.10/go.mod h1:L7tqrfTLj+N0pzPy8uv4noosorEni6eNPal6292pVTI=
 github.com/spf13/cobra v1.8.1 h1:e5/vxKd/rZsfSJMUX1agtjeTDf+qv1/JdBF8gg5k9ZM=
 github.com/spf13/cobra v1.8.1/go.mod h1:wHxEcudfqmLYa8iTfL+OuZPbBZkmvliBWKIezN3kD9Y=
 github.com/spf13/pflag v1.0.5 h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JXA=

@@ -1,6 +1,6 @@
 package main
 
-import "github.com/sarjsheff/hiklib-cli/cmd/hiklib-cli/pkg/cmd"
+import "github.com/r41co/hiklib-cli/cmd/hiklib-cli/pkg/cmd"
 
 func main() {
 	cmd.Execute()

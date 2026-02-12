@@ -5,13 +5,13 @@ import (
 	"log"
 
 	"github.com/dustin/go-humanize"
-	"github.com/sarjsheff/hiklib"
+	"github.com/r41co/hiklib"
 	"github.com/spf13/cobra"
 )
 
 var listCmd = &cobra.Command{
 	Use:   "list",
-	Short: "Get a list of saved videos from the camera in this month.",
+	Short: "Get a list of saved videos from the camera today.",
 	Run: func(cmd *cobra.Command, args []string) {
 		loglevel := -1
 		if Verbose {
