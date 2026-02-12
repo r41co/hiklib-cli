@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"log"
+	"time"
 
 	"github.com/dustin/go-humanize"
 	"github.com/r41co/hiklib"
@@ -17,8 +18,17 @@ var listCmd = &cobra.Command{
 		if Verbose {
 			loglevel = 0
 		}
+		layout := "2006-01-02T15:04:05"
+		st, s_error := time.Parse(layout, s_date)
+		et, e_error := time.Parse(layout, e_date)
 		u, dev := hiklib.HikLoginLog(camera, port, username, password, loglevel)
-		err, lst := hiklib.HikListVideo(u, dev.ByStartChan)
+		err := 0
+		lst := hiklib.MotionVideos{}
+		if (s_error != nil) || (e_error != nil) {
+			err, lst = hiklib.HikListVideo(u, dev.ByStartChan)
+		} else {
+			err, lst = hiklib.HikListVideo(u, dev.ByStartChan, st.Year(), int(st.Month()), st.Day(), st.Hour(), st.Minute(), st.Second(), et.Year(), int(et.Month()), et.Day(), et.Hour(), et.Minute(), et.Second())
+		}
 		log.Printf("Found %d video:\n", lst.Count)
 		if err == 0 {
 			for i, v := range lst.Videos {
@@ -33,6 +43,8 @@ func init() {
 	listCmd.PersistentFlags().StringVarP(&username, "username", "u", "", "Username (required if password is set)")
 	listCmd.Flags().StringVarP(&password, "password", "p", "", "Password (required if username is set)")
 	listCmd.Flags().StringVarP(&camera, "cameraip", "c", "", "Camera ip address")
+	listCmd.Flags().StringVarP(&s_date, "start", "s", "", "Starting date/time (YYYY-MM-DDTHH:II:SS)")
+	listCmd.Flags().StringVarP(&e_date, "end", "e", "", "Ending date/time (YYYY-MM-DDTHH:II:SS)")
 	listCmd.MarkFlagsRequiredTogether("username", "password", "cameraip")
 
 	listCmd.MarkFlagRequired("username")

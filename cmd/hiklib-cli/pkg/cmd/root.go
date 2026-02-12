@@ -9,6 +9,8 @@ var (
 	username string
 	password string
 	camera   string
+	s_date   string
+	e_date   string
 	port     int
 )
 
